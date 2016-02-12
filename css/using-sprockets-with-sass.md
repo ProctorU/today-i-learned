@@ -13,7 +13,8 @@ In Rails, it's common to `@import` all of your SASS partials like below:
 
 As you continue to add more and more SASS files, the compile time starts to add
 up, because it is recompiling all of your files. Ouch! Our compile time was
-taking anywhere from 30-40 seconds.
+taking anywhere from 30-40 seconds. That means every time we changed a CSS file,
+we would have to wait 35 seconds.
 
 **Sprockets to the rescue!**
 
@@ -44,4 +45,4 @@ The main difference here is now we are including our variables, mixins, and
 function partials on each component partial. Seems a bit redundant at first,
 but it lets you know exactly what that file has access to.
 
-Our compile time is now < 3 seconds.
+Our compile time is now less than 3 seconds.
