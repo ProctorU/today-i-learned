@@ -20,19 +20,20 @@ taking anywhere from 30-40 seconds.
 When you require your SASS partials with sprockets, the only compile that takes
 place is the file you changed. See below:
 
+**application.css.scss**
 ```scss
-// application.css.scss
-
 //= require components/_buttons
+```
 
--------------------------------
-// _base.scss
+**global/_base.scss**
+```scss
 //= require base/_variables
 //= require base/_mixins
+```
 
--------------------------------
-// components/_buttons.scss
-@import "base";
+**component/_buttons.scss**
+```scss
+@import "global/base";
 
 .button {
   ...
