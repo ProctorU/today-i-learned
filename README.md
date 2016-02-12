@@ -1,4 +1,4 @@
-### Today I Learned
+### Today We Learned
 
 A collection of concise write-ups on small things we learn day to day across
 a variety of languages and technologies.
