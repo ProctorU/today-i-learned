@@ -9,7 +9,7 @@ what the values passed through represent. Also, this makes the class difficult
 to change because order must be preserved to ensure code does not break. An
 example or the order args is below.
 
-```
+```ruby
 class Bicycle
   def initialize(size, gender, color)
   @size = size
@@ -24,7 +24,7 @@ pairs to declare your instance variables. That way, you can easily add to the
 class without fear of maintaining the order dependancy, was well as, provide
 clarity on instantiation of the class to what the values actually represent.
 
-```
+```ruby
 class Bicycle
   def initialize(args)
   @size = args[:size]
