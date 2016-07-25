@@ -12,9 +12,9 @@ example or the order args is below.
 ```ruby
 class Bicycle
   def initialize(size, gender, color)
-  @size = size
-  @gender = gender
-  @color = color
+    @size = size
+    @gender = gender
+    @color = color
   end
 end
 ```
@@ -27,9 +27,9 @@ clarity on instantiation of the class to what the values actually represent.
 ```ruby
 class Bicycle
   def initialize(args)
-  @size = args[:size]
-  @gender = args[:gender]
-  @color = args[:color]
+    @size = args[:size]
+    @gender = args[:gender]
+    @color = args[:color]
   end
 end
 ```
