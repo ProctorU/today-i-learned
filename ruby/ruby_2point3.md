@@ -59,4 +59,69 @@ dict.dig(:c, :x) #=> nil
 ## "Did you mean?"
 
 ```ruby
+2.3.0-preview1 :001 > "foo bar".uppcase
+NoMethodError: undefined method `uppcase' for "foo bar":String
+Did you mean?  upcase
+               upcase!`
+```
+
+## Hash “comparison”
+
+```ruby
+{ x: 1, y: 2 } >= { x: 1 } #=> true
+{ x: 1, y: 2 } >= { x: 2 } #=> false
+{ x: 1 } >= { x: 1, y: 2 } #=> false
+```
+
+## Hash#to_proc
+
+```ruby
+h = { foo: 1, bar: 2, baz: 3}
+p = h.to_proc
+
+p.call(:foo)  #=> 1
+p.call(:bar)  #=> 2
+p.call(:quux) #=> nil
+```
+
+```ruby
+h = { foo: 1, bar: 2, baz: 3}
+
+# instead of this:
+[:foo, :bar].map { |key| h[key] } #=> [1, 2]
+
+# we can use this syntax:
+[:foo, :bar].map(&h) #=> [1, 2]
+```
+
+## Hash#fetch_values
+
+```ruby
+h = { foo: 1, bar: 2, baz: 3}
+h.fetch_values(:foo, :bar) #=> [1, 2]
+
+h.values_at(:foo, :quux)    #=> [1, nil]
+h.fetch_values(:foo, :quux) #=> raise KeyError
+```
+
+## Enumerable#grep_v
+
+```ruby
+list = %w(foo bar baz)
+
+list.grep_v(/ba/)
+#=> ['foo']
+
+list.grep(/ba/)
+#=> ['bar', 'baz']
+```
+
+## Numeric#positive? and #negative?
+
+```ruby
+1.positive? #=> true
+1.negative? #=> false
+
+-1.positive? #=> false
+-1.negative? #=> true
 ```
