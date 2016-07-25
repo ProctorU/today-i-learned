@@ -42,6 +42,12 @@ str[0] = 'b'
 --disable-frozen-string-literal
 ```
 
+### Debugging Flag
+
+```ruby
+--debug-frozen-string-literal
+```
+
 ## Array#dig and Hash#dig
 
 ### For Arrays:
