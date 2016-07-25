@@ -17,6 +17,9 @@ end
 ```
 
 ## Frozen String Literals
+
+### Inline Comments:
+
 ```ruby
 # frozen_string_literal: true
 
@@ -25,6 +28,14 @@ str[0] = 'b'
 
 # frozen.rb:5:in `[]=': can't modify frozen String (RuntimeError)
 #   from frozen.rb:5:in `<main>''
+```
+
+### Global Flags when running your app:
+
+```ruby
+--enable-frozen-string-literal
+
+--disable-frozen-string-literal
 ```
 
 ## Array#dig and Hash#dig
