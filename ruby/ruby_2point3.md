@@ -1,6 +1,10 @@
 # Ruby 2.3 Features
 
-Courtesy of Nithin Bekal's article at http://nithinbekal.com/posts/ruby-2-3-features/
+Courtesy of many reference articles:
+- Nithin Bekal's article at
+  http://nithinbekal.com/posts/ruby-2-3-features/
+- Alexis Mas's article on immutable strings at
+  https://wyeworks.com/blog/2015/12/1/immutable-strings-in-ruby-2-dot-3
 
 ## Safe Navigation Operator
 
